@@ -1,9 +1,23 @@
+let campers = {
+    id: 0,
+    nombres: "",
+    apellidos: "",
+    direccion: "",
+    acudiente: "",
+    contacto: 0,
+    estado: "",
+    riesgo: ""
+}
+
 let Trainers = ["1. Pedro", "2. Jholber", "3. Miguel", "4. Garcia", "5. Fabio", "6. Holguer"]
 
 choice1= prompt("Bienvenido usuario a que informacion desea acceder?\n1. Campers\n2. Trainers")
 
 if (choice1 == 1) {
-    menu1 = prompt("Ingrese el número de la opcion a la que desea ingresar\n")
+    menu1 = prompt("Ingrese el número de la opcion a la que desea ingresar\n \n1. Registrar nuevo Camper\n2. Mostrar los campers en Inscrito\n3. Mostrar Campers en Riesgo\n4. Mostrar Campers segun ruta\n5. Mostrar informacion de Modulos")
+    if (menu1 == 1){
+        campers.push = prompt("Ingrese el numero de identificacion del Camper")
+    }
 
 } else if (choice1 == 2) {
     rta1 = prompt("Trainers activos:\n \n" + Trainers +"\n \nIngrese el número de la opcion a la que desea ingresar\n1. Informacion del Trainer\n2. Eliminar Trainer\n3. Agregar Trainer\n4. Reemplazar Trainer")
