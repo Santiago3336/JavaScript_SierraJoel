@@ -58,7 +58,8 @@ while (true) {
                 let mensaje = "Campers en Riesgo:\n";
                 campersRiesgo.forEach(function(camper){
                     mensaje += camper.id + " " + camper.nombres + " " + camper.apellidos + "\n \n"
-                })
+                });
+                alert(mensaje)
             } else{
                 alert("No hay campers en Riesgo");
             }
