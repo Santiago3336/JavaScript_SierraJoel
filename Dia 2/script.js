@@ -49,6 +49,20 @@ while (true) {
             } else{
                 alert("No hay campers inscritos.");
             }
+        } else if (menu1 == 3){
+            let campersRiesgo = campers.filter(function(camper){
+                return camper.riesgo;
+            });
+
+            if (campersRiesgo.length > 0) {
+                let mensaje = "Campers en Riesgo:\n";
+                campersRiesgo.forEach(function(camper){
+                    mensaje += camper.id + " " + camper.nombres + " " + camper.apellidos + "\n \n"
+                })
+            } else{
+                alert("No hay campers en Riesgo");
+            }
+            continue;
         } else if (menu1 == 6){
             continue
         }
