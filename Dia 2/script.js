@@ -2,12 +2,16 @@ let campers = [];
 
 let Trainers = ["1. Pedro", "2. Jholber", "3. Miguel", "4. Garcia", "5. Fabio", "6. Holguer"]
 
+//Bucle del programa para lograr continuidad
 while (true) {
+    //Menu principal
     choice1= prompt("Bienvenido usuario a que informacion desea acceder?\n1. Campers\n2. Trainers\n3. Salir")
 
     if (choice1 == 1) {
+        //Menu de Campers
         menu1 = prompt("Ingrese el número de la opcion a la que desea ingresar\n \n1. Registrar nuevo Camper\n2. Mostrar los campers en Inscrito\n3. Mostrar Campers en Riesgo\n4. Mostrar Campers segun ruta\n5. Mostrar informacion de Modulos\n6. Volver al Menu Principal")
         if (menu1 == 1){
+            //Registro de nuevo(s) Camper(s)
             cantidadCampers = parseInt(prompt("¿Cuantos campers deseas registrar?"))
             for (let i = 0; i < cantidadCampers; i++){
                 camper = {
@@ -22,6 +26,7 @@ while (true) {
 
                 }
 
+                //Solicitud para el/los nuevo(s) camper(s)
                 camper.id = parseInt(prompt("Ingrese el numero de identificacion del Camper"));
                 camper.nombres = prompt("Ingrese los nombres del Camper");
                 camper.apellidos = prompt("Ingrese los apellidos del Camper");
@@ -31,10 +36,12 @@ while (true) {
                 camper.estado = prompt("Ingrese el estado actual del Camper (En proceso de ingreso, Inscrito, Aprobado,Cursando, Graduado, Expulsado, Retirado)");
                 camper.riesgo = prompt("El camper se encuentra en Riesgo? (Responda 'si' o 'no')") === 'si'
 
+                //Agregar la informacion al Array
                 campers.push(camper);
 
             }
         } else if (menu1 == 2){
+            //Mostrar Campers Inscritos
             let campersInscritos = campers.filter(function(camper) {
                 return camper.estado === "Inscrito";
             });
@@ -49,7 +56,9 @@ while (true) {
             } else{
                 alert("No hay campers inscritos.");
             }
+            continue; //Volver al menú de Campers
         } else if (menu1 == 3){
+            //Mostrar campers con Riesgo
             let campersRiesgo = campers.filter(function(camper){
                 return camper.riesgo;
             });
@@ -63,23 +72,25 @@ while (true) {
             } else{
                 alert("No hay campers en Riesgo");
             }
-            continue;
+            continue; //Volver al menú de Campers
         } else if (menu1 == 6){
-            continue
+            continue; //Volver al menú Principal
         }
 
     } else if (choice1 == 2) {
+        //Menú de Trainers
         rta1 = prompt("Trainers activos:\n \n" + Trainers +"\n \nIngrese el número de la opcion a la que desea ingresar\n1. Informacion del Trainer\n2. Eliminar Trainer\n3. Agregar Trainer\n4. Reemplazar Trainer\n5. Volver al Menu Principal")
         if (rta1 == 1){
+            //Mostrar informacion del Trainer seleccionado
             selectTrainer = prompt("Ingrese el numero del trainer que desea ver:" + Trainers)
         } if (selectTrainer == 1){
             prompt("Nombre: Pedro\nSalones asignados: P1, P2\nHorario: 6:00 - 9:30; 10:00 - 14:00\nRuta asignada: Ruta Java\n quiere hacer pull o push?")
         } else if (rta1 == 5) {
-            continue;
+            continue; //Volver al menú principal
         }
 
     } else if (choice1 == 3) {
-        break;
+        break; //Salir del programa
     } else {
         alert("Opcion incorrecta, vuelve a intentarlo más tarde");
     }
