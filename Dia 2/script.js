@@ -33,6 +33,21 @@ if (choice1 == 1) {
             campers.push(camper);
 
         }
+    } else if (menu1 == 2){
+        let campersInscritos = campers.filter(function(camper) {
+            return camper.estado === "Inscrito";
+        });
+
+        if (campersInscritos.length > 0) {
+            let mensaje = "Campers Inscritos:\n";
+            campersInscritos.forEach(function(camper){
+                mensaje += `ID: ${camper.id}, Nombres: ${camper.nombres}, Apellidos: ${camper.apellidos}\n }`;
+
+            });
+            alert(mensaje);
+        } else{
+            alert("No hay campers inscritos.");
+        }
     }
 
 } else if (choice1 == 2) {
