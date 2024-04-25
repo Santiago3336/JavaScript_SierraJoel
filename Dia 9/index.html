@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StarWars</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+    
+    <div class="container">
+        <h1>Consultar Personajes</h1>
+        <label for="caracterID">ID del Personaje:</label>
+        <input type="text" placeholder="Ingrese el ID del Personaje..." id="caracterID">
+        <button onclick="fetchStarWars()">Buscar</button>
+
+        <div class="info-section">
+            <h2>Informacion General</h2>
+            <div id="GeneralInf"></div>
+        </div>
+
+        <div class="info-section">
+            <h2>Peliculas</h2>
+            <div id="FilmsInf"></div>
+        </div>
+
+        <div class="info-section">
+            <h2>Planeta Origen</h2>
+            <div id="HomeworldInf"></div>
+        </div>
+
+        <div class="info-section">
+            <h2>Informacion Adicional</h2>
+            <div id="ExtraInf"></div>
+        </div>
+
+    </div>    
+    
+    <script src="script.js"></script>
+
+    </body>
+</html>
