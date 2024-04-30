@@ -10,6 +10,8 @@ async function fetchPokedex(){
 
         const data = await response.json
         Display
+    } catch(error){
+        console.error('Error', error.message);
     }
 
 }
