@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="poker.css">
+        <title>Poker</title>
+    </head>
+    <body>
+        <header>
+            <h1>Poker</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Volver al inicio</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="gameSection">
+                <h2>Mesa de Poker</h2>
+                <div id="result"></div>
+                <div id="streak"></div>
+                <div class="buttons">
+                    <button id="dealBtn">Repartir</button>
+                    <button id="foldBtn">Pasar</button>
+                    <button id="callBtn">Igualar</button>
+                    <button id="raiseBtn">Subir</button>
+                </div>
+            </section>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.66.0.min.js"></script>
+        <script src="poker.js"></script>
+    </body>
+</html>

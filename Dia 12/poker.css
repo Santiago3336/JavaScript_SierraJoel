@@ -30,19 +30,29 @@ nav ul li a{
 }
 
 main{
-    padding: 20px;
+    padding: 20%;
 }
 
-.welcomeSection{
+.gameSection{
     text-align: center;
-    margin-top: 50px;
 }
 
-.gameButtons{
+#current-cards img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+#result, #streak{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.buttons{
     margin-top: 20px;
 }
 
 /*Estilos para botones*/
+
 button{
     background-color: #4CAF50;
     border: none;
@@ -60,18 +70,3 @@ button{
 button:hover{
     background-color: #45a049;
 }
-
-/*Estilos para dar el toque de casino*/
-h1{
-    font-size: 24px;
-    margin: 0;
-}
-
-h2{
-    font-size: 24px;
-}
-
-p{
-    font-size: 18px;
-}
-
