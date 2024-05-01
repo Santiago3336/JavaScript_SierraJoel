@@ -5,20 +5,6 @@ var resultDisplay = $("#result");
 var streakDiplay = $("#streak");
 var streakCounter = 0;
 
-$(document).ready(function(){
-    $("#dealBtn").click(function(){
-        dealCards();
-    });
-    $("#foldBtn").click(function(){
-        fold();
-    });
-    $("#callBtn").click(function(){
-        call();
-    });
-    $("#raiseBtn").click(function(){
-        RadioNodeList();
-    });
-});
 
 function dealCards(){
     $.get(API_URL + "/new/shuffle/?deck_count=1", function(response){
@@ -32,7 +18,7 @@ function dealCards(){
 function displayCards(cards){
     currentCards.empty();
     cards.forEach(function(card){
-        currentCards.append(`<img src="${card.image} alt="${card.value} de ${card.suit}">`);
+        currentCards.append(`<img src="${card.image}" alt="${card.value} de ${card.suit}">`);
     });
 }
 
@@ -47,3 +33,18 @@ function call(){
 function raise(){
     resultDisplay.text("Has subido la apuesta")
 }
+
+$(document).ready(function(){
+    $("#deal-btn").click(function(){
+        dealCards();
+    });
+    $("#fold-btn").click(function(){
+        fold();
+    });
+    $("#call-btn").click(function(){
+        call();
+    });
+    $("#raise-btn").click(function(){
+        raise();
+    });
+});
