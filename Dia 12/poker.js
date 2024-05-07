@@ -48,3 +48,81 @@ $(document).ready(function(){
         raise();
     });
 });
+
+
+function machineTurn(){
+    var desicion = Math.floor(Math.random()*3);
+    switch(desicion){
+        case 0:
+            fold();
+            break;
+        case 1:
+            call();
+            break;
+        case 2:
+            raise();
+            break;
+        default:
+            break;
+    }
+}
+
+function playerTurn() {
+    console.log("Es tu turno. Selecciona una accion:");
+    $("#fold-btn").show();
+    $("#call-btn").show();
+    $("#raise-btn").show();
+}
+
+function compareHands(playerHand, machineHand) {
+    var playerValue = getValue(playerHand);
+    var machineValue = getValue(machineHand);
+
+    if (playerValue > machineValue){
+        console.log("¡Ganaste!")
+    } else if (playerValue < machineValue){
+        console.log("Perdiste...")
+    } else{
+        console.log("Empate")
+    }
+
+
+}
+
+function getValue(hand){
+    var value = 0;
+    hand.forEach(function(card){
+        value += getValueOfCard(card.value);
+    });
+    return value
+}
+
+function getValueOfCard(cardValue){
+    switch(cardValue){
+        case "ACE":
+            return 14;
+        case "KING":
+            return 13;
+        case "QUEEN":
+            return 12;
+        case "JACK":
+            return 11;
+        default:
+            return parseInt(cardValue)
+    }
+}
+
+function playGame(){
+    dealCards()
+
+    playerTurn()
+
+    dealCards()
+
+    machineTurn()
+
+    compareHands(playerHand, machineHand)
+}
+
+playGame()
+
