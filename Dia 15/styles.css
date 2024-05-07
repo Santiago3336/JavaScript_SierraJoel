@@ -17,3 +17,13 @@ body{
     height: 100%;
 }
 
+#userImage{
+    margin: 50px 0 0 0;
+    border-radius: 100%;
+}
+
+img{
+    border-radius: 100%;
+}
+
+
