@@ -23,4 +23,10 @@ function fetchRandomPerson(){
     })
 }
 
+const reloadButton = document.getElementById('reloadButton')
+
+reloadButton.addEventListener('click', () => {
+    location.reload()
+})
+
 fetchRandomPerson()
